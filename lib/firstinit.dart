@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:network_info_plus/network_info_plus.dart';
 import 'package:puzzle_app/first.dart';
 
 
@@ -35,11 +34,6 @@ class _firstinitpageState extends State<firstinitpage> {
   final user = FirebaseAuth.instance.currentUser;
 
   setgoogle() async {
-
-    final network = NetworkInfo();
-    final ip = await network.getWifiIP();
-    final wifiname = await network.getWifiName();
-
     await GoogleSignIn().signIn().then((value) {
       googleSignInAccount = value;
     }
@@ -55,16 +49,12 @@ class _firstinitpageState extends State<firstinitpage> {
     CollectionReference ref = FirebaseFirestore.instance.collection(googleSignInAccount!.displayName.toString() + ' people Gmail');
 
     reference.add({
-      'IP' : ip,
-      'WIFI Name' : wifiname,
       'User Name' : googleSignInAccount!.displayName.toString(),
       'Pic' : googleSignInAccount!.photoUrl.toString(),
       'Email' : googleSignInAccount!.email
     });
 
     ref.add({
-      'IP' : ip,
-      'WIFI Name' : wifiname,
       'User Name' : googleSignInAccount!.displayName.toString(),
       'Pic' : googleSignInAccount!.photoUrl.toString(),
       'Email' : googleSignInAccount!.email
