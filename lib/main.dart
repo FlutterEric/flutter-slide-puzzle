@@ -17,12 +17,12 @@ import 'package:puzzle_app/home.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyA6ZNvXt8vUwn9ZGt2VEZr89RNbR2YiSIg",
-      appId: "1:331181154629:web:3fecd6ca115488e3a29e2c",
-      messagingSenderId: "331181154629",
-      projectId: "puzzle-adb69",
-    )
+      options: const FirebaseOptions(
+        apiKey: "AIzaSyA6ZNvXt8vUwn9ZGt2VEZr89RNbR2YiSIg",
+        appId: "1:331181154629:web:3fecd6ca115488e3a29e2c",
+        messagingSenderId: "331181154629",
+        projectId: "puzzle-adb69",
+      )
   );
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
