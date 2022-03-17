@@ -80,7 +80,6 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
   void initState() {
     // TODO: implement initState
     super.initState();
-    number.shuffle();
 
     animationController4 = AnimationController(
         vsync: this
@@ -423,8 +422,8 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
     ballgoingAnimation = SequenceAnimationBuilder()
         .addAnimatable(
         animatable: Tween<double>(
-          begin: MediaQuery.of(context).size.width / 900,
-          end: MediaQuery.of(context).size.height / 30 + 100 ,
+          begin: MediaQuery.of(context).size.height / 20,
+          end: MediaQuery.of(context).size.height / 7 ,
         ),
         from: const Duration(seconds: 0),
         to: const Duration(seconds: 2),
@@ -433,8 +432,8 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
     )
         .addAnimatable(
         animatable: Tween<double>(
-            begin: MediaQuery.of(context).size.width / 3 + 90,
-            end: MediaQuery.of(context).size.width / 3 - 40
+            begin: MediaQuery.of(context).size.width / 1.8,
+            end: MediaQuery.of(context).size.width / 5
         ),
         from: const Duration(seconds: 2),
         to: const Duration(seconds: 3),
@@ -443,8 +442,8 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
     )
         .addAnimatable(
         animatable: Tween<double>(
-            begin: MediaQuery.of(context).size.height / 30 + 100,
-            end: MediaQuery.of(context).size.height / 30 + 225
+            begin: MediaQuery.of(context).size.height / 7,
+            end: MediaQuery.of(context).size.height / 3.2
         ),
         from: const Duration(seconds: 3),
         to: const Duration(seconds: 4),
@@ -453,8 +452,8 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
     )
         .addAnimatable(
         animatable: Tween<double>(
-            begin: MediaQuery.of(context).size.width / 3 - 50,
-            end: MediaQuery.of(context).size.width / 3 - 130
+            begin: MediaQuery.of(context).size.width / 5,
+            end: MediaQuery.of(context).size.width / 9
         ),
         from: const Duration(seconds: 4),
         to: const Duration(seconds: 5),
@@ -464,16 +463,16 @@ class _quickrollingballgamepageState extends State<quickrollingballgamepage> wit
         .animate(animationController4);
 
     CollectionReference ref = FirebaseFirestore.instance.collection(widget.name + ' Rolling Ball Slide Puzzle(2)');
-    double ball1 = size.height / 10 + 3;
-    double ball2 = size.height / 4 + 16;
-    double ball3 = size.height / 3 + 80;
-    double ballleft1 = size.width / 10 + 19;
-    double ballleft2 = size.width / 10 + 149;
-    double ballleft3 = size.width / 10 + 279;
+    double ball1 = size.height / 9;
+    double ball2 = size.height / 3.8;
+    double ball3 = size.height / 2.4;
+    double ballleft1 = size.width / 6.1;
+    double ballleft2 = size.width / 2.2;
+    double ballleft3 = size.width / 1.28;
 
-    double ballnumber1 = size.height / 10 + 20;
-    double ballnumber2 = size.height / 4 + 40;
-    double ballnumber3 = size.height / 3 + 100;
+    double ballnumber1 = size.height / 6.7;
+    double ballnumber2 = size.height / 3.4;
+    double ballnumber3 = size.height / 2.2;
 
     return MaterialApp(
       home: Scaffold(

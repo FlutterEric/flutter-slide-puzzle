@@ -445,7 +445,7 @@ class _rollingballgame2pageState extends State<rollingballgame2page> with Ticker
     )
     .addAnimatable(
       animatable: Tween<double>(
-        begin: MediaQuery.of(context).size.width / 3 + 90,
+        begin: MediaQuery.of(context).size.width / 3 + 80,
         end: MediaQuery.of(context).size.width / 3 - 40
       ),
       from: const Duration(seconds: 2),
@@ -466,7 +466,7 @@ class _rollingballgame2pageState extends State<rollingballgame2page> with Ticker
     .addAnimatable(
       animatable: Tween<double>(
         begin: MediaQuery.of(context).size.width / 3 - 50,
-        end: MediaQuery.of(context).size.width / 3 - 130
+        end: MediaQuery.of(context).size.width / 3 - 110
       ),
       from: const Duration(seconds: 4),
       to: const Duration(seconds: 5),
@@ -476,16 +476,16 @@ class _rollingballgame2pageState extends State<rollingballgame2page> with Ticker
              .animate(animationController4);
 
     CollectionReference ref = FirebaseFirestore.instance.collection(widget.name + ' Animation Rolling Ball Slide Puzzle(2)');
-    double ball1 = size.height / 10 + 3;
-    double ball2 = size.height / 4 + 16;
-    double ball3 = size.height / 3 + 80;
-    double ballleft1 = size.width / 10 + 19;
-    double ballleft2 = size.width / 10 + 149;
-    double ballleft3 = size.width / 10 + 279;
+    double ball1 = size.height / 9;
+    double ball2 = size.height / 3.8;
+    double ball3 = size.height / 2.4;
+    double ballleft1 = size.width / 6.1;
+    double ballleft2 = size.width / 2.2;
+    double ballleft3 = size.width / 1.28;
 
-    double ballnumber1 = size.height / 10 + 20;
-    double ballnumber2 = size.height / 4 + 40;
-    double ballnumber3 = size.height / 3 + 100;
+    double ballnumber1 = size.height / 6.7;
+    double ballnumber2 = size.height / 3.4;
+    double ballnumber3 = size.height / 2.2;
 
     return MaterialApp(
         home: Scaffold(

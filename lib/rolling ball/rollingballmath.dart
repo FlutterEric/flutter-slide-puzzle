@@ -424,58 +424,58 @@ class _rollingball1pageState extends State<rollingball1page> with TickerProvider
     ).animate(animationController);
 
     ballgoingAnimation = SequenceAnimationBuilder()
-    .addAnimatable(
-      animatable: Tween<double>(
-        begin: MediaQuery.of(context).size.height / 10 - 79,
-        end: MediaQuery.of(context).size.height / 10 - 64,
-      ),
-      from: const Duration(seconds: 0),
-      to: const Duration(seconds: 1),
-      curve: Curves.ease,
-      tag: 'ballbottom1'
+        .addAnimatable(
+        animatable: Tween<double>(
+          begin: MediaQuery.of(context).size.height / 12.5,
+          end: MediaQuery.of(context).size.height / 12,
+        ),
+        from: const Duration(seconds: 0),
+        to: const Duration(seconds: 2),
+        curve: Curves.ease,
+        tag: 'ballbottom1'
     )
-    .addAnimatable(
-      animatable: Tween<double>(
-        begin: MediaQuery.of(context).size.width / 10 + 190,
-        end: MediaQuery.of(context).size.width / 10 + 55,
-      ),
-      from: const Duration(seconds: 1),
-      to: const Duration(seconds: 2),
-      curve: Curves.ease,
-      tag: 'ballleft1'
+        .addAnimatable(
+        animatable: Tween<double>(
+          begin: MediaQuery.of(context).size.width / 1.7,
+          end: MediaQuery.of(context).size.width / 4.9,
+        ),
+        from: const Duration(seconds: 2),
+        to: const Duration(seconds: 3),
+        curve: Curves.ease,
+        tag: 'ballleft1'
     )
-    .addAnimatable(
-      animatable: Tween<double>(
-        begin: MediaQuery.of(context).size.height / 10 + 30,
-        end: MediaQuery.of(context).size.height / 3 + 100
-      ),
-      from: const Duration(seconds: 2),
-      to: const Duration(seconds: 4),
-      curve: Curves.ease,
-      tag: 'ballgobottom1'
+        .addAnimatable(
+        animatable: Tween<double>(
+            begin: MediaQuery.of(context).size.height / 12,
+            end: MediaQuery.of(context).size.height / 2.8
+        ),
+        from: const Duration(seconds: 3),
+        to: const Duration(seconds: 4),
+        curve: Curves.ease,
+        tag: 'ballgobottom1'
     )
-    .addAnimatable(
-      animatable: Tween<double>(
-        begin: MediaQuery.of(context).size.width / 10 + 55,
-        end: MediaQuery.of(context).size.width / 10 - 41
-      ),
-      from: const Duration(seconds: 4),
-      to: const Duration(seconds: 5),
-      curve: Curves.ease,
-      tag: 'ballleft2'
+        .addAnimatable(
+        animatable: Tween<double>(
+            begin: MediaQuery.of(context).size.width / 4.9,
+            end: MediaQuery.of(context).size.width / 13
+        ),
+        from: const Duration(seconds: 4),
+        to: const Duration(seconds: 5),
+        curve: Curves.ease,
+        tag: 'ballleft2'
     ).animate(animationController4);
 
     CollectionReference ref = FirebaseFirestore.instance.collection(widget.name + ' Animation Rolling Ball Slide Puzzle(1)');
-    double ball1 = size.height / 10 + 3;
-    double ball2 = size.height / 4 + 16;
-    double ball3 = size.height / 3 + 80;
-    double ballleft1 = size.width / 10 + 19;
-    double ballleft2 = size.width / 10 + 149;
-    double ballleft3 = size.width / 10 + 279;
+    double ball1 = size.height / 9;
+    double ball2 = size.height / 3.8;
+    double ball3 = size.height / 2.4;
+    double ballleft1 = size.width / 6.1;
+    double ballleft2 = size.width / 2.2;
+    double ballleft3 = size.width / 1.28;
 
-    double ballnumber1 = size.height / 10 + 20;
-    double ballnumber2 = size.height / 4 + 40;
-    double ballnumber3 = size.height / 3 + 100;
+    double ballnumber1 = size.height / 6.7;
+    double ballnumber2 = size.height / 3.4;
+    double ballnumber3 = size.height / 2.2;
 
     return MaterialApp(
         home: Scaffold(
