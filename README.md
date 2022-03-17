@@ -4,13 +4,18 @@ A new Flutter application.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+How to run app?
 
-A few resources to get you started if this is your first Flutter project:
+In Flutter Terminal run flutter run --no-sound-null-safety
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+How to build apk?
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In Flutter Terminal run flutter build apk --no-sound-null-safety
+
+How to run web?
+
+In Flutter Terminal run flutter run -d chrome --no-sound-null-safety
+
+How to build web?
+
+In Flutter Terminal run flutter build web --no-sound-null-safety
